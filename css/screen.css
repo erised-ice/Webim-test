@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:300,400,700&display=swap&subset=cyrillic');
+
+body {
+  min-width: 320px;
+  font-family: 'Ubuntu', sans-serif;
+  color: #393e6b;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.inner {
+  width: 100%;
+  max-width: 1064px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+.header {
+  background: linear-gradient(67deg, #282b44 0%, #3d4480 100%);
+}
+
+.header__inner {
+  display: flex;
+  padding: 53px 20px 0;
+}
+
+.logo__link {
+  display: inline-block;
+  padding: 10px 29px 13px 25px;
+  width: 163px;
+}
+
+.logo__img {
+  width: 100%;
+}
+
+.header__description {
+  border-left: 1px solid #49657d;
+  padding: 11px 28px 12px;
+}
+
+.header__text {
+  color: #fff;
+  line-height: 18px;
+  letter-spacing: 0.35px;
+}
+
+.header__link {
+  color: #60e5d7;
+  font-size: 12px;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+
+.header__nav {
+  margin-left: auto;
+  margin-top: 34px;
+}
+
+.nav__link {
+  color: #fff;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 15px 23px 11px;
+}
+
+.nav__link.active {
+  border-radius: 18px;
+  background: #fff;
+  color: #393e6b;
+  font-weight: 700;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 1024px) {
+  .nav__link:hover {
+    darken(0.07)
+  }
+}

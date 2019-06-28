@@ -117,6 +117,13 @@ body {
 .footer__inner {
   text-align: center;
   padding: 20px;
+  font-weight: 300;
+  color: #7b7fa8;
+  letter-spacing: 0.35px;
+}
+
+.footer__link {
+  color: #22d6e7;
 }
 
 @media (max-width: 1032px) {

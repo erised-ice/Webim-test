@@ -49,6 +49,7 @@ body {
 .header__link {
   color: #60e5d7;
   font-size: 12px;
+  font-size: 12px;
   font-weight: 300;
   letter-spacing: 0.3px;
 }
@@ -149,6 +150,91 @@ body {
   justify-content: space-between;
 }
 
+.clients {
+  background-color: #f5f5fa;
+  padding: 95px 0 82px;
+}
+
+.clients__title {
+  opacity: 0.35;
+  color: #393e6b;;
+  font-size: 28px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  text-align: center;
+  margin-bottom: 89px;
+}
+
+.slider.slick-slider {
+  margin-bottom: 0;
+}
+
+.slick-arrow {
+  width: 12px;
+  height: 23px;
+}
+
+.slick-arrow:before {
+  content: none;
+}
+
+.slick-prev {
+  background: url('../images/arrow_prev.svg') no-repeat;
+  left: -35px;
+}
+
+.slick-next {
+  background: url('../images/arrow_next.svg') no-repeat;
+  right: -35px;
+}
+
+.slick-prev:hover,
+.slick-prev:focus {
+  background: url("../images/arrow_prev.svg");
+}
+
+.slick-next:hover,
+.slick-next:focus {
+  background: url("../images/arrow_next.svg");
+}
+
+.slick-dots {
+  bottom: -40px;
+}
+
+.slick-dots li button:before,
+.slick-dots li.slick-active button:before,
+.slick-arrow:before {
+  color: transparent;
+}
+
+.slick-dots li {
+  width: 5px;
+  height: 5px;
+  background: #9ea0b8;
+  opacity: 0.4;
+  border-radius: 50%;
+  margin: 8px;
+}
+
+.slick-dots li.slick-active {
+  opacity: 1;
+}
+
+.slider__item {
+  margin: 0 40px;
+}
+
+.slider__img {
+  margin: auto;
+}
+
+.slider .slick-track {
+  display: flex;
+  align-items: center;
+}
+
 .footer {
   background-color: #242637;
 }
@@ -165,6 +251,13 @@ body {
   color: #22d6e7;
 }
 
+@media (max-width: 1134px) {
+  .slider {
+    margin: 0 auto 30px;
+    max-width: calc(100% - 70px);
+  }
+}
+
 @media (max-width: 1032px) {
   .header__nav {
     padding-right: 0;
@@ -173,7 +266,6 @@ body {
   .header__description {
     max-width: 205px;
   }
-
 }
 
 @media (max-width: 923px) {
@@ -218,6 +310,14 @@ body {
 
   .intro__text {
     padding-bottom: 38px;
+  }
+}
+
+@media (max-width: 767px) {
+  .clients__title {
+    margin-bottom: 44px;
+    font-size: 18px;
+    letter-spacing: 0.9px;
   }
 }
 
@@ -276,5 +376,13 @@ body {
     padding: 57px 0 0;
     text-align: center;
     order: 1;
+  }
+
+  .clients {
+    padding: 34px 0 68px;
+  }
+
+  .slider__item {
+    margin: 0 10px;
   }
 }

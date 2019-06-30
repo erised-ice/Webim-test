@@ -1,14 +1,16 @@
-const $buttonOpenMenu = document.querySelector('.js-open-menu');
-const $copyrightYear = document.querySelector('.js-copyright-year');
+const setCurrentYear = () => {
+  $('.js-copyright-year').text(new Date().getFullYear());
+};
 
-$copyrightYear.textContent = '2019';
+const openMobileMenu = () => {
+  const $buttonOpenMenu = $('.js-open-menu');
 
-$buttonOpenMenu.addEventListener('click', function () {
-  const $menu = document.querySelector('.js-menu');
-  $menu.classList.toggle('menu--show');
-});
+  $buttonOpenMenu.on('click', () => {
+    $('.js-menu').toggleClass('menu--show');
+  });
+};
 
-$(document).ready( function() {
+const initSlider = () => {
   $('.js-clients-slider').slick({
     slidesToShow: 4,
     slidesToScroll: 1,
@@ -36,4 +38,10 @@ $(document).ready( function() {
       }
     ]
   });
+};
+
+$(document).ready(() => {
+  setCurrentYear();
+  openMobileMenu();
+  initSlider();
 });

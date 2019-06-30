@@ -37,7 +37,7 @@
             <a href="#" class="nav__link">Возможности</a>
             <a href="#" class="nav__link">Стоимость</a>
           </nav>
-          <button type="button" class="header__button">Регистрация</button>
+          <button type="button" class="header__button js-header-registration-button">Регистрация</button>
         </div>
       </div>
     </header>
@@ -82,6 +82,37 @@
         </div>
       </div>
     </div>
+    <div class="registration main__registration js-registration">
+      <div class="registration__inner inner">
+        <div class="registration__title">Регистрация</div>
+        <form action="#" class="registration__form">
+          <div class="registration__fields">
+            <input class="registration__input" type="text" name="name" placeholder="Имя" required>
+            <input class="registration__input js-registration-phone" type="text" name="phone" placeholder="Телефон" required>
+            <input class="registration__input" type="email" name="email" placeholder="Email" required>
+            <input class="registration__input" type="password" name="password" placeholder="Пароль" required>
+            <input class="registration__input" type="url" name="website" placeholder="Сайт">
+          </div>
+          <div class="registration__permission">
+            <input type="checkbox" name="permission" id="permission" class="registration__checkbox" required>
+            <label class="registration__label" for="permission">
+              Регистрируясь в системе, я принимаю условия <br />
+              <a href="#" class="registration__link">
+                лицензионного соглашения
+              </a>,
+              <a href="#" class="registration__link">
+                Политики конфиденциальности <br />
+              </a>
+              и даю Согласие
+              <a href="#" class="registration__link">
+                на обработку персональных данных.
+              </a>
+            </label>
+          </div>
+          <button class="registration__button" type="submit">Зарегистрироваться</button>
+        </form>
+      </div>
+    </div>
   </main>
   <footer class="footer">
     <div class="footer__inner inner">
@@ -95,6 +126,7 @@
   </footer>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
   <script src="js/slick.min.js"></script>
+  <script src="js/jquery.mask.min.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

@@ -1,17 +1,17 @@
 const setCurrentYear = () => {
-  $('.js-copyright-year').text(new Date().getFullYear());
+  $(".js-copyright-year").text(new Date().getFullYear());
 };
 
 const openMobileMenu = () => {
-  const $buttonOpenMenu = $('.js-open-menu');
+  const $buttonOpenMenu = $(".js-open-menu");
 
-  $buttonOpenMenu.on('click', () => {
-    $('.js-menu').toggleClass('menu--show');
+  $buttonOpenMenu.on("click", () => {
+    $(".js-menu").toggleClass("menu--show");
   });
 };
 
 const initSlider = () => {
-  $('.js-clients-slider').slick({
+  $(".js-clients-slider").slick({
     slidesToShow: 4,
     slidesToScroll: 1,
     responsive: [
@@ -40,8 +40,25 @@ const initSlider = () => {
   });
 };
 
+const setPhoneMasks = () => {
+  $(".js-registration-phone").mask("+7 (000) - 000 - 00 - 00");
+};
+
+const smoothAnchor = () => {
+  const $headerRegistrationButton = $(".js-header-registration-button");
+  const $registration = $(".js-registration");
+  const offsetTopOfRegistration = $registration.offset().top;
+  const smoothSpeed = 500;
+
+  $headerRegistrationButton.on("click", () => {
+    $("body,html").animate({ scrollTop: offsetTopOfRegistration }, smoothSpeed);
+  });
+};
+
 $(document).ready(() => {
   setCurrentYear();
   openMobileMenu();
   initSlider();
+  setPhoneMasks();
+  smoothAnchor();
 });

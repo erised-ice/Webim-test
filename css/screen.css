@@ -335,6 +335,7 @@ body {
   letter-spacing: 0.3px;
   padding-left: 32px;
   text-align: left;
+  cursor: pointer;
 }
 
 .registration__label::before {
@@ -402,6 +403,11 @@ body {
 @media (min-width: 1024px) {
   .nav__link:hover {
     color: #b3b5c8;
+  }
+
+  .registration__link:hover,
+  .footer__link:hover {
+    text-decoration: underline;
   }
 }
 

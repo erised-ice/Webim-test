@@ -44,10 +44,12 @@ const setPhoneMasks = () => {
   $(".js-registration-phone").mask("+7 (000) - 000 - 00 - 00");
 };
 
+const $registration = $(".js-registration");
+const offsetTopOfRegistration = $registration.offset().top;
+
 const smoothAnchor = () => {
   const $headerRegistrationButton = $(".js-header-registration-button");
-  const $registration = $(".js-registration");
-  const offsetTopOfRegistration = $registration.offset().top;
+
   const smoothSpeed = 500;
 
   $headerRegistrationButton.on("click", () => {
